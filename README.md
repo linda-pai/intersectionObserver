@@ -75,4 +75,19 @@ const lazyLoadImages = (entries, observer) => {
 
     }, [loadingRef, lazyLoadImages])
     
+  //抓取文章-page改變時會再執行
+    useEffect(() => {   
+        fetch(url, {
+            method: 'POST',
+            body: ...
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            }
+        })
+            .then(res => {
+                return res.json();
+            }).then(result => {
+                ...
+            });
+    }, [page]);
 ```
